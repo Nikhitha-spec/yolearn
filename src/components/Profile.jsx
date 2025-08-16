@@ -31,7 +31,7 @@ const Profile = () => {
         <div className="flex items-start space-x-6">
           <div className="relative">
             <img
-              src={user?.profilePhoto || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'}
+              src={user?.profilePhoto || 'https://images.pexels.com/photos/675920/pexels-photo-675920.jpeg?cs=srgb&dl=pexels-minan1398-675920.jpg&fm=jpg'}
               alt={user?.name}
               className="w-24 h-24 rounded-3xl border-4 border-campus-pink object-cover"
             />
