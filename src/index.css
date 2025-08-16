@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Campus Vibes Theme Variables */
+:root {
+  --pink: #F48FB1;
+  --purple: #BA68C8;
+  --blue: #64B5F6;
+  --dark-gray: #2D3748;
+  --light-gray: #F7FAFC;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1A202C;
+  --bg-secondary: #2D3748;
+  --text-primary: #F7FAFC;
+  --text-secondary: #A0AEC0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  transition: all 0.3s;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  &:hover {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+  }
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Campus card styles */
+.campus-card {
+  @apply bg-white rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:scale-105;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+  backdrop-filter: blur(10px);
+}
+
+.campus-gradient {
+  background: linear-gradient(135deg, #F48FB1, #BA68C8, #64B5F6);
+}
+
+.campus-gradient-soft {
+  background: linear-gradient(135deg, rgba(244,143,177,0.1), rgba(186,104,200,0.1), rgba(100,181,246,0.1));
+}
+
+/* Dark mode styles */
+.dark .campus-card {
+  @apply bg-gray-800 border-gray-700;
+  background: linear-gradient(135deg, rgba(45,55,72,0.9), rgba(45,55,72,0.7));
+}
+
+.dark {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Button styles */
+.btn-campus {
+  @apply px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: white;
+}
+
+.btn-campus:hover {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  box-shadow: 0 10px 25px rgba(244,143,177,0.3);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
